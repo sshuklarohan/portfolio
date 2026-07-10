@@ -143,9 +143,8 @@ export default function About() {
         transform: showRest ? 'translateY(0)' : 'translateY(12px)',
         transition: 'opacity 0.6s 0.1s, transform 0.6s 0.1s',
       }}>
-        I build thoughtful, well-crafted software — from scalable backend systems
-        to the interfaces people actually use. Currently focused on Python, React,
-        and cloud infrastructure.
+        build intelligent software at the intersection of machine learning and full-stack engineering. 
+        From computer vision models to user-facing applications, I enjoy creating systems that are practical, scalable, and impactful.
       </p>
 
       <p style={{
@@ -155,8 +154,8 @@ export default function About() {
         transform: showRest ? 'translateY(0)' : 'translateY(12px)',
         transition: 'opacity 0.6s 0.2s, transform 0.6s 0.2s',
       }}>
-        I care about clean architecture, good developer experience, and shipping
-        things that work reliably in production.
+        I’m driven by curiosity, ownership, and the challenge of using technology to 
+        improve everyday experiences through thoughtful engineering.
       </p>
 
       <div style={{
