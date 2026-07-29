@@ -1,42 +1,45 @@
 # Portfolio
 
-React + FastAPI portfolio. No database — content lives in source files.
+A fully static React + TypeScript portfolio site — no backend, no server,
+no Docker. All content (projects, experience, skills) lives in
+`src/data.ts`. Edit that file to update the site.
 
-## Running locally
-
-```bash
-docker compose up --build
-```
-
-| URL | What |
-|-----|------|
-| http://localhost:5173      | Portfolio site |
-| http://localhost:8000/docs | API docs |
-
-## Updating content
-
-| What to change | File to edit |
-|----------------|--------------|
-| Projects        | `backend/data.py` |
-| Experience      | `backend/data.py` |
-| Skills          | `frontend/src/data.ts` |
-| About text / links | `frontend/src/components/About.tsx` |
-| Your name       | `frontend/src/components/Nav.tsx` + `About.tsx` |
-
-After editing, rebuild:
+## Local development
 
 ```bash
-docker compose up --build
+npm install
+npm run dev
 ```
 
-## Deploying to a server
-
-On any Linux server with Docker installed:
+## Build
 
 ```bash
-git pull
-docker compose up --build -d
+npm run build
 ```
 
-That's it. Nginx is included in the stack and handles HTTPS termination
-if you add a certificate.
+Outputs static files to `dist/`.
+
+## Deploy on Cloudflare Pages
+
+**Recommended: Git integration (no CLI needed)**
+
+1. Push this repo to GitHub/GitLab.
+2. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git.
+3. Select the repo. Build settings:
+   - Framework preset: **Vite**
+   - Build command: `npm run build`
+   - Build output directory: `dist`
+4. Deploy. Every push to your main branch redeploys automatically.
+5. Add your custom domain under the Pages project's **Custom domains** tab
+   (if the domain is already on Cloudflare, this is a couple of clicks —
+   DNS and SSL are handled for you).
+
+**Alternative: Wrangler CLI (deploy without connecting a git repo)**
+
+```bash
+npm install -g wrangler
+npm run build
+wrangler pages deploy dist --project-name=your-project-name
+```
+
+Both paths serve the same static output — pick whichever fits your workflow.
