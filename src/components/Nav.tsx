@@ -44,7 +44,7 @@ export default function Nav() {
             textAlign: 'left', padding: 0, marginBottom: '3rem',
           }}>
             <div style={{ fontFamily: 'var(--font-display)', fontSize: 18, color: 'var(--text)', lineHeight: 1.2 }}>
-              Your Name
+              Rohan Shukla
             </div>
             <div style={{ fontFamily: 'var(--font-mono)', fontSize: 11, color: 'var(--accent)', marginTop: 4, letterSpacing: '0.08em' }}>
               SOFTWARE ENGINEER

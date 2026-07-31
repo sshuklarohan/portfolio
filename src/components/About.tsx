@@ -165,9 +165,9 @@ export default function About() {
         transition: 'opacity 0.6s 0.3s, transform 0.6s 0.3s',
       }}>
         {[
-          { label: 'GitHub',   href: 'https://github.com' },
-          { label: 'LinkedIn', href: 'https://linkedin.com' },
-          { label: 'CV',       href: '/cv.pdf' },
+          { label: 'GitHub',   href: 'https://github.com/sshuklarohan' },
+          { label: 'LinkedIn', href: 'https://www.linkedin.com/in/shuklarohan04/' },
+          { label: 'CV',       href: '/rohan_shukla_resume_swe.pdf' },
         ].map(({ label, href }) => (
           <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{
             fontFamily: 'var(--font-mono)', fontSize: 12, letterSpacing: '0.08em',
