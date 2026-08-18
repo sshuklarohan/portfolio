@@ -65,8 +65,8 @@ export const PROJECTS: Project[] = [
   {
     id: 3,
     title: "Live Personal Trainer",
-    summary: "Computer vision fitness assistant that uses MediaPipe BlazePose to analyze exercise form in real time and provide live posture feedback.",
-    tags: ["Python", "MediaPipe", "Computer Vision", "Machine Learning"],
+    summary: "Browser-based fitness coach that analyzes squat form from live webcam video using MediaPipe's BlazePose model, giving real-time posture feedback with debounced, flicker-free error detection.",
+    tags: ["TypeScript", "React", "MediaPipe", "Computer Vision", "Vite"],
     repo_url: "https://github.com/sshuklarohan/CV_Workout_Helper",
     live_url: null,
     featured: true,
